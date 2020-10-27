@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import store from './store'
 
 import router from './router'
 //当一个项目包含多个域名时更加推荐封装使用
@@ -14,6 +15,7 @@ Vue.prototype.$api = api;
 Vue.config.productionTip = false
 var vue = new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')
 
